@@ -20,7 +20,7 @@
           x:Name="Root">
         
 
-        <TextBlock Text="My ToDo-List" />
+        <TextBlock Classes="h1" Text="My ToDo-List" />
 
     <!-- This is our little text block -->
 
@@ -31,8 +31,7 @@
                         <Grid ColumnDefinitions="*, Auto" Margin="4">
                             <CheckBox IsChecked="{Binding IsChecked}" Content="{Binding Content}" />
                             <Button Grid.Column="1"
-                                    Command="{Binding $parent[Window].DataContext.RemoveItemCommand}"
-
+                                    Command="{Binding #Root.((vm:MainWindowViewModel)DataContext).RemoveItemCommand}"
                                     CommandParameter="{Binding .}">
                                 <PathIcon Data="{DynamicResource DeleteIconData}"
                                         Height="15"
