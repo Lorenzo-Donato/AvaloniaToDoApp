@@ -7,6 +7,20 @@ namespace ToDoApp.ViewModels
 {
     public partial class ToDoItemViewModel : ViewModelBase
     {
+
+        public ToDoItemViewModel()
+        {
+
+        }
+
+        public ToDoItemViewModel(ToDoItem item)
+        {
+
+            IsChecked = item.IsChecked;
+            Content = item.Content;
+
+        }
+
         [ObservableProperty]
         private bool _isChecked;
 
@@ -14,27 +28,19 @@ namespace ToDoApp.ViewModels
         private string? _content;
 
 
-        public ToDoItemViewModel()
-        {
-
-        }
-
-
-        public ToDoItemViewModel(ToDoItem item)
-        {
-            IsChecked = item.IsChecked;
-            Content = item.Content;
-        }
-
 
         public ToDoItem GetToDoItem()
         {
+
             return new ToDoItem()
             {
                 IsChecked = this.IsChecked,
                 Content = this.Content
             };
+
         }
+
+
 
 
 

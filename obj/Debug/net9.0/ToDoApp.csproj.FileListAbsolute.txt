@@ -72,3 +72,4 @@
 /home/lorenzo/Desktop/avalonia/todolist/ToDoApp/obj/Debug/net9.0/ToDoApp.pdb
 /home/lorenzo/Desktop/avalonia/todolist/ToDoApp/obj/Debug/net9.0/ToDoApp.genruntimeconfig.cache
 /home/lorenzo/Desktop/avalonia/todolist/ToDoApp/obj/Debug/net9.0/ref/ToDoApp.dll
+/home/lorenzo/Desktop/avalonia/todolist/ToDoApp/obj/Debug/net9.0/ToDoApp.sourcelink.json

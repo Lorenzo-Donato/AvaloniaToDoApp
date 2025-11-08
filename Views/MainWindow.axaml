@@ -26,6 +26,21 @@
 
         <ScrollViewer Grid.Row="1">
             <ItemsControl ItemsSource="{Binding ToDoItems}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate DataType="vm:ToDoItemViewModel">
+                        <Grid ColumnDefinitions="*, Auto" Margin="4">
+                            <CheckBox IsChecked="{Binding IsChecked}" Content="{Binding Content}" />
+                            <Button Grid.Column="1"
+                                    Command="{Binding $parent[Window].DataContext.RemoveItemCommand}"
+
+                                    CommandParameter="{Binding .}">
+                                <PathIcon Data="{DynamicResource DeleteIconData}"
+                                        Height="15"
+                                        Foreground="Red" />
+                            </Button>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
 
